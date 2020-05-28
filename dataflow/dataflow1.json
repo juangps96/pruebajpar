@@ -13,12 +13,8 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [
-				{
-					"name": "Select1"
-				}
-			],
-			"script": "source(allowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1\nsource1 select(skipDuplicateMapInputs: true,\n\tskipDuplicateMapOutputs: true) ~> Select1"
+			"transformations": [],
+			"script": "source(output(\n\t\tCEDULA as string,\n\t\tNOMBRES as string,\n\t\tAPELLIDOS as string,\n\t\tDIRECCION_CASA as string,\n\t\tDIRECCION_OFICINA as string,\n\t\tTELEFONO_CASA as string,\n\t\tTELEFONO_OFICINA as string\n\t),\n\tallowSchemaDrift: true,\n\tvalidateSchema: false,\n\tisolationLevel: 'READ_UNCOMMITTED',\n\tformat: 'table') ~> source1"
 		}
 	}
 }
