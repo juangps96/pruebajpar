@@ -28,9 +28,16 @@
 				}
 			},
 			{
-				"name": "Copy data1",
+				"name": "2MER_DSA_F010_Compania",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "1MER_DSA_F0006_CENTRO",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -56,7 +63,41 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "CCCO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CCCO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CCNAME",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CCNAME",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "fecha"
+								},
+								"sink": {
+									"name": "FECHACARGA",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
