@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"packageLocation": {
-						"packagePath": "Prueba1/AzureDataFactory1",
+						"packagePath": "Prueba1/AzureDataFactory1/pkgMER_DSA.dtsx",
 						"type": "SSISDB"
 					},
 					"environmentPath": null,
