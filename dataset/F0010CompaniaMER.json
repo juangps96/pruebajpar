@@ -1,5 +1,5 @@
 {
-	"name": "F0010Compania",
+	"name": "F0010CompaniaMER",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureMER",
