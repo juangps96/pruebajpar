@@ -1,0 +1,25 @@
+{
+	"name": "F0010Compania",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureMER",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "CCCO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CCNAME",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "F0010"
+		}
+	}
+}
