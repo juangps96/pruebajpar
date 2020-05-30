@@ -1,0 +1,51 @@
+{
+	"name": "cuentasDSA",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CompaniaDSA",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "GMMCU",
+				"type": "varchar"
+			},
+			{
+				"name": "GMOBJ",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GMSUB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GMDL01",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GMAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GMCO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GMLDA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FECHACARGA",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "F0901_CUENTAS"
+		}
+	}
+}
