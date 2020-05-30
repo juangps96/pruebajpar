@@ -148,7 +148,91 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "GMMCU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GMMCU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMOBJ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GMOBJ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMSUB",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GMSUB",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMDL01",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GMDL01",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMAID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GMAID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMCO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GMCO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMLDA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GMLDA",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "fecha"
+								},
+								"sink": {
+									"name": "FECHACARGA",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
