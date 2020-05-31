@@ -343,7 +343,7 @@
 							},
 							{
 								"source": {
-									"name": "GBAN04"
+									"name": "GBAN03"
 								},
 								"sink": {
 									"name": "GBAN03",
