@@ -562,7 +562,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "AzureSqlSource",
-						"sqlReaderQuery": "DELETE\n  FROM [dbo].[F0006_CENTRO]\n\n  DELETE\n  FROM [dbo].[F0010_COMPANIA]\n\n  DELETE\n  FROM [dbo].[F0901_CUENTAS]\n\n  DELETE\n  FROM [dbo].[F0902_SALDOS]",
+						"sqlReaderQuery": "DELETE\n  FROM [dbo].[F0006_CENTRO];\n\n  DELETE\n  FROM [dbo].[F0010_COMPANIA];\n\n  DELETE\n  FROM [dbo].[F0901_CUENTAS];\n\n  DELETE\n  FROM [dbo].[F0902_SALDOS];\n\nSELECT 0;",
 						"queryTimeout": "02:00:00"
 					},
 					"dataset": {
