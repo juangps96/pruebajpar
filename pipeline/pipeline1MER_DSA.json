@@ -581,7 +581,14 @@
 			{
 				"name": "INTEGRIDAD_DE_DATOS",
 				"type": "Lookup",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "4MER_DSA_F0902_SALDOS",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
