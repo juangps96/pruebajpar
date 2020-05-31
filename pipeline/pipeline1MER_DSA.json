@@ -433,7 +433,7 @@
 							},
 							{
 								"source": {
-									"name": ""
+									"name": "fecha"
 								},
 								"sink": {
 									"name": "FECHACARGA",
