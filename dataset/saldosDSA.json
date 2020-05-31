@@ -1,0 +1,121 @@
+{
+	"name": "saldosDSA",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CompaniaDSA",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "GBMCU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GBCO",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GBOBJ",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GBSUB",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GBLT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "GBFY",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN01",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN02",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN03",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN04",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN05",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN06",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN07",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN08",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN09",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN10",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN11",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "GBAN12",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 7
+			},
+			{
+				"name": "FECHACARGA",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "F0902_SALDOS"
+		}
+	}
+}
