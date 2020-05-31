@@ -3,41 +3,9 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "1MER_DSA_F0006_CENTRO",
-				"type": "ExecuteSSISPackage",
-				"dependsOn": [],
-				"policy": {
-					"timeout": "7.00:00:00",
-					"retry": 0,
-					"retryIntervalInSeconds": 30,
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"packageLocation": {
-						"packagePath": "Prueba1/AzureDataFactory1/pkgMER_DSA.dtsx",
-						"type": "SSISDB"
-					},
-					"environmentPath": null,
-					"connectVia": {
-						"referenceName": "integrationRuntime1",
-						"type": "IntegrationRuntimeReference"
-					},
-					"loggingLevel": "Basic"
-				}
-			},
-			{
 				"name": "2MER_DSA_F010_Compania",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "1MER_DSA_F0006_CENTRO",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -294,6 +262,104 @@
 				"outputs": [
 					{
 						"referenceName": "saldosDSA",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "1MER_DSA_F0006",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"additionalColumns": [
+							{
+								"name": "FECHA",
+								"value": {
+									"value": "@utcnow()",
+									"type": "Expression"
+								}
+							}
+						],
+						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "MCMCU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MCMCU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MCDL01",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MCDL01",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MCSBLI",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MCSBLI",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MCCO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "MCCO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FECHA"
+								},
+								"sink": {
+									"name": "FECHACARGA",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "MER_F0006",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "DSA_F0006",
 						"type": "DatasetReference"
 					}
 				]

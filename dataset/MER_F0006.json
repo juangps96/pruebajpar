@@ -1,0 +1,33 @@
+{
+	"name": "MER_F0006",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureMER",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "MCMCU",
+				"type": "varchar"
+			},
+			{
+				"name": "MCDL01",
+				"type": "varchar"
+			},
+			{
+				"name": "MCSBLI",
+				"type": "varchar"
+			},
+			{
+				"name": "MCCO",
+				"type": "varchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "F0006"
+		}
+	}
+}

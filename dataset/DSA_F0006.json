@@ -1,0 +1,39 @@
+{
+	"name": "DSA_F0006",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "CompaniaDSA",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "MCMCU",
+				"type": "varchar"
+			},
+			{
+				"name": "MCDL01",
+				"type": "varchar"
+			},
+			{
+				"name": "MCSBLI",
+				"type": "varchar"
+			},
+			{
+				"name": "MCCO",
+				"type": "varchar"
+			},
+			{
+				"name": "FECHACARGA",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "F0006_CENTRO"
+		}
+	}
+}
