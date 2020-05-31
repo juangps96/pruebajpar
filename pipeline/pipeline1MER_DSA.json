@@ -546,6 +546,30 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "borrar",
+				"type": "Lookup",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "AzureSqlSource",
+						"sqlReaderQuery": "DELETE\n  FROM [dbo].[F0006_CENTRO]\n\n  DELETE\n  FROM [dbo].[F0010_COMPANIA]\n\n  DELETE\n  FROM [dbo].[F0901_CUENTAS]\n\n  DELETE\n  FROM [dbo].[F0902_SALDOS]",
+						"queryTimeout": "02:00:00"
+					},
+					"dataset": {
+						"referenceName": "CompaniaDSA",
+						"type": "DatasetReference"
+					}
+				}
 			}
 		],
 		"concurrency": 1,
