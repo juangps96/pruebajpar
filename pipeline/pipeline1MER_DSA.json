@@ -454,7 +454,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "borrar",
+						"activity": "Truncar",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -555,7 +555,7 @@
 				]
 			},
 			{
-				"name": "borrar",
+				"name": "Truncar",
 				"type": "Lookup",
 				"dependsOn": [],
 				"policy": {
