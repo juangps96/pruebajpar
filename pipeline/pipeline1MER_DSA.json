@@ -264,8 +264,7 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "GMMCU",
-									"type": "String"
+									"name": "GBMCU"
 								},
 								"sink": {
 									"name": "GBMCU",
@@ -274,8 +273,7 @@
 							},
 							{
 								"source": {
-									"name": "GMOBJ",
-									"type": "String"
+									"name": "GBCO"
 								},
 								"sink": {
 									"name": "GBCO",
@@ -284,8 +282,7 @@
 							},
 							{
 								"source": {
-									"name": "GMSUB",
-									"type": "String"
+									"name": "GBOBJ"
 								},
 								"sink": {
 									"name": "GBOBJ",
@@ -294,8 +291,7 @@
 							},
 							{
 								"source": {
-									"name": "GMDL01",
-									"type": "String"
+									"name": "GBSUB"
 								},
 								"sink": {
 									"name": "GBSUB",
@@ -304,8 +300,7 @@
 							},
 							{
 								"source": {
-									"name": "GMAID",
-									"type": "String"
+									"name": "GBLT"
 								},
 								"sink": {
 									"name": "GBLT",
@@ -314,8 +309,7 @@
 							},
 							{
 								"source": {
-									"name": "GMCO",
-									"type": "String"
+									"name": "GBFY"
 								},
 								"sink": {
 									"name": "GBFY",
@@ -324,8 +318,7 @@
 							},
 							{
 								"source": {
-									"name": "GMLDA",
-									"type": "String"
+									"name": "GBAN01"
 								},
 								"sink": {
 									"name": "GBAN01",
