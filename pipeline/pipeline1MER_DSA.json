@@ -5,7 +5,14 @@
 			{
 				"name": "2MER_DSA_F010_Compania",
 				"type": "Copy",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "1MER_DSA_F0006",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "7.00:00:00",
 					"retry": 0,
@@ -251,11 +258,194 @@
 					"sink": {
 						"type": "AzureSqlSink"
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "GMMCU",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GBMCU",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMOBJ",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GBCO",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMSUB",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GBOBJ",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMDL01",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GBSUB",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMAID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GBLT",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GMCO",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GBFY",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GMLDA",
+									"type": "String"
+								},
+								"sink": {
+									"name": "GBAN01",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN02"
+								},
+								"sink": {
+									"name": "GBAN02",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN04"
+								},
+								"sink": {
+									"name": "GBAN03",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN04"
+								},
+								"sink": {
+									"name": "GBAN04",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN05"
+								},
+								"sink": {
+									"name": "GBAN05",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN06"
+								},
+								"sink": {
+									"name": "GBAN06",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN07"
+								},
+								"sink": {
+									"name": "GBAN07",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN08"
+								},
+								"sink": {
+									"name": "GBAN08",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN09"
+								},
+								"sink": {
+									"name": "GBAN09",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN10"
+								},
+								"sink": {
+									"name": "GBAN10",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN11"
+								},
+								"sink": {
+									"name": "GBAN11",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "GBAN12"
+								},
+								"sink": {
+									"name": "GBAN12",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": ""
+								},
+								"sink": {
+									"name": "FECHACARGA",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
 				},
 				"inputs": [
 					{
-						"referenceName": "cuentasMER",
+						"referenceName": "SALDOS_MER",
 						"type": "DatasetReference"
 					}
 				],
